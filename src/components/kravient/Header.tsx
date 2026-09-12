@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link } from "./AppLink";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -44,7 +44,7 @@ function MegaPanel({ openLabel }: { openLabel: string }) {
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const pathname = typeof window === "undefined" ? "/" : window.location.pathname;
 
   useEffect(() => {
     setOpen(null);
@@ -160,3 +160,4 @@ export function Header() {
     </>
   );
 }
+

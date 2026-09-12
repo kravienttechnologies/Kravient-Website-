@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "./AppLink";
 
 import { footerColumns } from "@/data/navigation";
 
@@ -51,3 +51,4 @@ export function Footer() {
     </footer>
   );
 }
+

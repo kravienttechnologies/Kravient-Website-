@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import { CaseStudyPlaceholder } from "@/components/kravient/CaseStudyPlaceholder";
 import { FinalCTA } from "@/components/kravient/FinalCTA";
 import { Footer } from "@/components/kravient/Footer";
@@ -8,11 +6,7 @@ import { PageHero } from "@/components/kravient/PageHero";
 import { ScrollReveal } from "@/components/kravient/primitives";
 import { caseStudies } from "@/data/caseStudies";
 
-export const Route = createFileRoute("/case-studies")({
-  component: CaseStudiesPage,
-});
-
-function CaseStudiesPage() {
+export function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -48,3 +42,4 @@ function CaseStudiesPage() {
     </div>
   );
 }
+

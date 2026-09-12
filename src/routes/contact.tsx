@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
@@ -6,10 +5,6 @@ import { Footer } from "@/components/kravient/Footer";
 import { Header } from "@/components/kravient/Header";
 import { PageHero } from "@/components/kravient/PageHero";
 import { ScrollReveal, SectionEyebrow } from "@/components/kravient/primitives";
-
-export const Route = createFileRoute("/contact")({
-  component: ContactPage,
-});
 
 const interests = ["Kravient HMS", "Custom Software", "Partnership", "Other"];
 const sources = ["Google Search", "Referral", "Social Media", "Event", "Other"];
@@ -21,7 +16,7 @@ const contactBlocks = [
 const inputClass =
   "min-h-[48px] w-full border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-muted2/60 transition-colors duration-200 focus:border-accent focus:outline-none";
 
-function ContactPage() {
+export function ContactPage() {
   const [interest, setInterest] = useState("Kravient HMS");
 
   return (
@@ -192,3 +187,5 @@ function ContactPage() {
     </div>
   );
 }
+
+

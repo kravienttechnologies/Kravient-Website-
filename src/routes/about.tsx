@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import aboutBanner from "@/assets/about page banner.jpg";
 import industryHealthcare from "@/assets/industry-healthcare.jpg";
 import industryRetail from "@/assets/industry-retail.jpg";
@@ -12,16 +10,12 @@ import { PageHero } from "@/components/kravient/PageHero";
 import { ScrollReveal, SectionEyebrow } from "@/components/kravient/primitives";
 import { values } from "@/data/content";
 
-export const Route = createFileRoute("/about")({
-  component: AboutPage,
-});
-
 const valueTiles = values.map((value, index) => ({
   ...value,
   image: [industryHealthcare, statementOne, industryRetail, statementThree][index],
 }));
 
-function AboutPage() {
+export function AboutPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -104,3 +98,4 @@ function AboutPage() {
     </div>
   );
 }
+

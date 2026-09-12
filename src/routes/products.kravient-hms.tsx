@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Activity, Database, Monitor, RefreshCw, Wifi, WifiOff } from "lucide-react";
 
 import heroHospital from "@/assets/hero-hospital.jpg";
@@ -21,10 +20,6 @@ import {
 } from "@/components/ui/accordion";
 import { hms } from "@/data/products";
 
-export const Route = createFileRoute("/products/kravient-hms")({
-  component: HmsPage,
-});
-
 const offlineSteps = [
   { label: "Hospital Computer", icon: Monitor },
   { label: "Local Database", icon: Database },
@@ -36,7 +31,7 @@ const offlineSteps = [
 
 const moduleImages = [heroHospital, healthcare, hmsDashboard, statement1, statement2, statement3];
 
-function HmsPage() {
+export function HmsPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -259,3 +254,5 @@ function HmsPage() {
     </div>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "./AppLink";
 
 import logoImage from "@/assets/logo.png";
 import { cn } from "@/lib/utils";

@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import { FinalCTA } from "@/components/kravient/FinalCTA";
 import { Footer } from "@/components/kravient/Footer";
 import { Header } from "@/components/kravient/Header";
@@ -7,11 +5,7 @@ import { PageHero } from "@/components/kravient/PageHero";
 import { ArrowLink, ScrollReveal, SectionEyebrow } from "@/components/kravient/primitives";
 import { extendedIndustries } from "@/data/industries";
 
-export const Route = createFileRoute("/solutions")({
-  component: SolutionsPage,
-});
-
-function SolutionsPage() {
+export function SolutionsPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -104,3 +98,4 @@ function SolutionsPage() {
     </div>
   );
 }
+

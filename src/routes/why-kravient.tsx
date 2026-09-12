@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import agriculture from "@/assets/industry-agriculture.jpg";
 import whyHero from "@/assets/why-hero.jpg";
 import { BrowserMockup } from "@/components/kravient/BrowserMockup";
@@ -21,11 +19,7 @@ import {
 } from "@/components/ui/accordion";
 import { platformCatalog } from "@/data/platform";
 
-export const Route = createFileRoute("/why-kravient")({
-  component: WhyKravientPage,
-});
-
-function WhyKravientPage() {
+export function WhyKravientPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -217,3 +211,4 @@ function WhyKravientPage() {
     </div>
   );
 }
+

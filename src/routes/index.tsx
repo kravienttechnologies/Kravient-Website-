@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, createFileRoute } from "@tanstack/react-router";
+import { Link } from "@/components/kravient/AppLink";
 import {
   ArrowRight,
   BadgeCheck,
@@ -31,10 +31,6 @@ import { statements } from "@/data/content";
 import { industries } from "@/data/industries";
 import { platformTiles } from "@/data/platform";
 import { hms } from "@/data/products";
-
-export const Route = createFileRoute("/")({
-  component: Index,
-});
 
 const whyBenefits = [
   {
@@ -193,7 +189,7 @@ function IndustriesCarousel() {
   );
 }
 
-function Index() {
+export function Index() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -605,4 +601,5 @@ function Index() {
     </div>
   );
 }
+
 

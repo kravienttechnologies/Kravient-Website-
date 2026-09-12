@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "./AppLink";
 import { cva, type VariantProps } from "class-variance-authority";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -201,3 +201,4 @@ export function StatusPill({
     </span>
   );
 }
+

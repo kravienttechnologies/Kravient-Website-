@@ -1,5 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
-
 import { BrowserMockup } from "@/components/kravient/BrowserMockup";
 import { FinalCTA } from "@/components/kravient/FinalCTA";
 import { Footer } from "@/components/kravient/Footer";
@@ -14,11 +12,7 @@ import {
 import { process } from "@/data/content";
 import { customSolutionPlaceholders, hms } from "@/data/products";
 
-export const Route = createFileRoute("/products")({
-  component: ProductsPage,
-});
-
-function ProductsPage() {
+export function ProductsPage() {
   return (
     <div className="min-h-screen bg-cream text-ink">
       <Header />
@@ -157,3 +151,4 @@ function ProductsPage() {
     </div>
   );
 }
+
