@@ -28,7 +28,17 @@ export function AboutPage() {
           backgroundPosition="center"
         />
 
-        <section className="bg-cream py-24 sm:py-32">
+        <section className="bg-navy-deep text-white">
+          <div className="container-site py-8 sm:py-9">
+            <p className="max-w-4xl font-display text-2xl font-extrabold leading-tight sm:text-3xl">
+              Practical software, built with patience and ownership.
+            </p>
+            <p className="mt-2 max-w-3xl text-base font-medium leading-relaxed text-white/68 sm:text-lg">
+              We design every Kravient product around the way real teams work, decide and grow.
+            </p>
+          </div>
+        </section>
+<section className="bg-cream py-24 sm:py-32">
           <div className="container-site grid gap-6 lg:grid-cols-2">
             <ScrollReveal>
               <div className="flex h-full flex-col bg-navy-deep p-10 sm:p-14">
@@ -92,6 +102,37 @@ export function AboutPage() {
           </div>
         </section>
 
+        
+        <section className="bg-white py-16 sm:py-20">
+          <div className="container-site grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <ScrollReveal>
+              <div>
+                <SectionEyebrow>How we build</SectionEyebrow>
+                <h2 className="mt-5 max-w-xl font-display text-4xl font-extrabold leading-tight tracking-tight text-navy-deep sm:text-5xl">
+                  Calm systems for busy teams.
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={120}>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  ["01", "Understand the workflow"],
+                  ["02", "Build only what matters"],
+                  ["03", "Support after launch"],
+                ].map(([number, label]) => (
+                  <div key={number} className="border border-line bg-cream p-6">
+                    <span className="font-display text-xs font-bold tracking-[0.3em] text-accent">
+                      {number}
+                    </span>
+                    <p className="mt-5 font-display text-xl font-bold leading-snug text-navy-deep">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
         <FinalCTA />
       </main>
       <Footer />
