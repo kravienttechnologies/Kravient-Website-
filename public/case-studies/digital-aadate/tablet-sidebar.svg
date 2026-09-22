@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="512" viewBox="0 0 384 512">
+  <rect width="384" height="512" fill="#f7f8f6"/>
+  <rect x="144" y="0" width="240" height="512" fill="#000" opacity="0.34"/>
+  <rect x="0" y="0" width="144" height="512" fill="#064b36"/>
+  <rect x="10" y="14" width="126" height="39" rx="10" fill="#155942" stroke="#2b6c55"/>
+  <circle cx="30" cy="33" r="14" fill="#f6fff7" stroke="#c6e2d0" stroke-width="2"/>
+  <text x="25" y="37" fill="#064a35" font-family="Arial, sans-serif" font-size="9" font-weight="800">ST</text>
+  <text x="53" y="30" fill="#ffffff" font-family="Arial, sans-serif" font-size="7.4" font-weight="800">शेखर तात्याबा कुंझीर</text>
+  <text x="53" y="40" fill="#bfe3d4" font-family="Arial, sans-serif" font-size="6.6">सौम्य शेखर कुंझीर</text>
+  <text x="11" y="80" fill="#a9ccbd" font-family="Arial, sans-serif" font-size="7.5" font-weight="700">नेव्हिगेशन</text>
+  <g font-family="Arial, sans-serif" font-size="8.4" font-weight="800">
+    <rect x="8" y="91" width="129" height="29" rx="7" fill="#ffbd00"/>
+    <text x="45" y="109" fill="#074732">डॅशबोर्ड</text>
+    <text x="45" y="139" fill="#d6eee3">सूचना</text>
+    <circle cx="128" cy="136" r="6.5" fill="#ffbd00"/>
+    <text x="126" y="139" fill="#074732" font-size="7">1</text>
+    <text x="45" y="164" fill="#d6eee3">ग्राहक पडताळणी</text>
+    <text x="45" y="190" fill="#d6eee3">तक्रार नोंदवा</text>
+    <text x="45" y="216" fill="#d6eee3">माझ्या तक्रारी</text>
+    <text x="45" y="242" fill="#d6eee3">दैनिक बाजार भाव</text>
+    <text x="45" y="268" fill="#d6eee3">बाजार माहिती</text>
+    <text x="45" y="294" fill="#d6eee3">सूचना आणि कागदपत्रे</text>
+    <text x="45" y="320" fill="#d6eee3">माझे प्रोफाइल</text>
+    <text x="45" y="346" fill="#d6eee3">माझ्या गाळ्याची माहिती</text>
+    <text x="45" y="372" fill="#d6eee3">पोस्ट सबमिट करा</text>
+    <text x="45" y="398" fill="#d6eee3">शेअर केलेल्या पोस्ट</text>
+    <text x="45" y="424" fill="#d6eee3">पोर्टल रिव्ह्यू</text>
+    <text x="45" y="450" fill="#d6eee3">मोबाईल क्रमांक बदला</text>
+  </g>
+  <g fill="none" stroke="#c7e0d3" stroke-width="1" opacity="0.9">
+    <rect x="16" y="101" width="9" height="9" rx="1"/>
+    <circle cx="20" cy="136" r="3.5"/>
+    <rect x="16" y="158" width="9" height="7" rx="1"/>
+    <rect x="16" y="184" width="8" height="9" rx="1"/>
+    <rect x="16" y="210" width="9" height="8" rx="1"/>
+    <path d="M17 237h8M20 233h5M20 241h5"/>
+    <rect x="16" y="262" width="9" height="8" rx="1"/>
+    <rect x="16" y="288" width="8" height="9" rx="1"/>
+    <circle cx="20" cy="315" r="3.5"/>
+    <rect x="16" y="340" width="9" height="8" rx="1"/>
+    <rect x="16" y="366" width="9" height="8" rx="1"/>
+    <rect x="16" y="392" width="9" height="8" rx="1"/>
+    <path d="M20 416l2.6 5 5.4.5-4 3.5 1.2 5.3-5.2-2.8-5.2 2.8 1.2-5.3-4-3.5 5.4-.5z"/>
+  </g>
+  <line x1="0" y1="455" x2="144" y2="455" stroke="#063d2d"/>
+  <text x="12" y="468" fill="#a9ccbd" font-family="Arial, sans-serif" font-size="7.5" font-weight="700">खाते</text>
+  <text x="45" y="480" fill="#d6eee3" font-family="Arial, sans-serif" font-size="8.5" font-weight="800">मदत आणि सहाय्य</text>
+  <text x="45" y="505" fill="#d6eee3" font-family="Arial, sans-serif" font-size="8.5" font-weight="800">बाहेर पडा</text>
+  <rect x="144" y="0" width="240" height="57" fill="#ffffff" opacity="0.76"/>
+  <rect x="269" y="18" width="25" height="18" rx="8" fill="#e8f8ed"/><text x="277" y="30" fill="#007557" font-family="Arial" font-size="7" font-weight="800">आड</text>
+  <rect x="302" y="18" width="27" height="18" rx="9" fill="#fff" stroke="#e0e0e0"/><text x="310" y="30" fill="#666" font-family="Arial" font-size="7">EN</text>
+  <rect x="327" y="18" width="29" height="18" rx="9" fill="#004b36"/><text x="336" y="30" fill="#fff" font-family="Arial" font-size="7">MR</text>
+  <rect x="358" y="18" width="22" height="18" rx="5" fill="#ffbd00"/>
+  <text x="165" y="77" fill="#004b36" font-family="Arial" font-size="17" font-weight="900">शेखर तात्याबा कुंझीर</text>
+  <rect x="159" y="92" width="213" height="57" rx="10" fill="#fff" stroke="#dfe5df"/>
+  <rect x="159" y="155" width="45" height="49" rx="9" fill="#fff" stroke="#dfe5df"/>
+  <rect x="211" y="155" width="149" height="49" rx="9" fill="#fff" stroke="#dfe5df"/>
+  <rect x="209" y="170" width="25" height="26" rx="7" fill="#ffbd00"/>
+  <text x="239" y="181" fill="#777" font-family="Arial" font-size="8">जोडलेले ग्राहक</text><text x="239" y="196" fill="#004b36" font-family="Arial" font-size="17" font-weight="900">1</text>
+  <rect x="159" y="213" width="213" height="87" rx="10" fill="#fff" stroke="#dfe5df"/>
+  <text x="166" y="235" fill="#59615b" font-family="Arial" font-size="8">एका लॉगिनमधून तुमच्या मोबाईल क्रमांकाशी जोडलेली अनेक</text>
+  <rect x="159" y="306" width="213" height="70" rx="10" fill="#fff" stroke="#dfe5df"/>
+  <rect x="168" y="329" width="91" height="41" rx="6" fill="#f8fcf8" stroke="#007557"/>
+  <rect x="330" y="326" width="29" height="18" rx="9" fill="#004b36"/><text x="338" y="338" fill="#fff" font-family="Arial" font-size="7">मुख्य</text>
+  <rect x="159" y="384" width="213" height="128" rx="10" fill="#fff" stroke="#dfe5df"/>
+  <g fill="#ffbd00"><rect x="166" y="408" width="95" height="31" rx="6"/><rect x="271" y="408" width="88" height="31" rx="6"/><rect x="166" y="448" width="95" height="31" rx="6"/><rect x="271" y="448" width="88" height="31" rx="6"/><rect x="166" y="488" width="95" height="24" rx="6"/></g>
+  <g font-family="Arial" font-size="8" font-weight="800" fill="#004b36"><text x="204" y="427">तक्रार नोंदवा</text><text x="297" y="427">पोस्ट सबमिट करा</text><text x="203" y="467">पोर्टल रिव्ह्यू</text><text x="298" y="467">बाजार माहिती</text></g>
+  <rect x="144" y="466" width="240" height="46" fill="#f7f8f6" opacity="0.9"/>
+  <text x="195" y="495" fill="#777" font-family="Arial" font-size="7">डॅशबोर्ड</text><text x="293" y="495" fill="#777" font-family="Arial" font-size="7">सूचना</text><text x="358" y="495" fill="#777" font-family="Arial" font-size="7">अधिक</text>
+</svg>

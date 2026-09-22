@@ -83,17 +83,17 @@ export const primaryNav: NavItem[] = [
         links: [
           {
             label: "Offline-First",
-            to: "/why-kravient",
+            to: "/why-kravient#offline",
             description: "Connectivity enhances software. It should not control it.",
           },
           {
             label: "Simplicity",
-            to: "/why-kravient",
+            to: "/why-kravient#simplicity",
             description: "If it needs a manual, we have failed.",
           },
           {
             label: "Built for Bharat",
-            to: "/why-kravient",
+            to: "/why-kravient#bharat",
             description: "Designed for how India actually operates.",
           },
         ],
@@ -103,12 +103,12 @@ export const primaryNav: NavItem[] = [
         links: [
           {
             label: "Pricing Philosophy",
-            to: "/why-kravient",
+            to: "/why-kravient#pricing",
             description: "One simple price. No hidden modules.",
           },
           {
             label: "Platform Vision",
-            to: "/why-kravient",
+            to: "/why-kravient#platform",
             description: "One platform, every Bharat business.",
           },
         ],
@@ -145,3 +145,5 @@ export const footerColumns: MegaColumn[] = [
     ],
   },
 ];
+
+

@@ -22,8 +22,8 @@ export function AboutPage() {
       <main>
         <PageHero
           eyebrow="About Kravient"
-          titleLines={["Built patiently.", "Built independently.", "Built to last."]}
-          lede="Praavi Group started as Praavi Consultants four years ago, building software for businesses that needed it done right, not done fast and forgotten. Kravient is the first product built from that experience."
+          titleLines={["Built with care.", "Made to last."]}
+          lede="Praavi Group began as Praavi Consultants, building reliable software for real business needs. Kravient brings that experience into a practical product made for long-term value."
           backgroundImage={aboutBanner}
           backgroundPosition="center"
         />
@@ -139,4 +139,5 @@ export function AboutPage() {
     </div>
   );
 }
+
 

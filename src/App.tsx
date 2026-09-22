@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { AboutPage } from "./routes/about";
+import { CaseStudyDetailPage } from "./routes/case-study-detail";
 import { CaseStudiesPage } from "./routes/case-studies";
 import { ContactPage } from "./routes/contact";
 import { Index } from "./routes/index";
@@ -36,7 +37,14 @@ export default function App() {
   }, []);
 
   return useMemo(() => {
-    switch (pathname.replace(/\/$/, "") || "/") {
+    const normalizedPath = pathname.replace(/\/$/, "") || "/";
+    const caseStudyMatch = normalizedPath.match(/^\/case-studies\/([^/]+)$/);
+
+    if (caseStudyMatch) {
+      return <CaseStudyDetailPage slug={caseStudyMatch[1]} />;
+    }
+
+    switch (normalizedPath) {
       case "/":
         return <Index />;
       case "/about":

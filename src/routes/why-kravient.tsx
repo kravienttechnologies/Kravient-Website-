@@ -1,4 +1,5 @@
 import agriculture from "@/assets/industry-agriculture.jpg";
+import { CloudOff, IndianRupee, Layers3, WifiOff } from "lucide-react";
 import whyHero from "@/assets/why-hero.jpg";
 import { BrowserMockup } from "@/components/kravient/BrowserMockup";
 import { FinalCTA } from "@/components/kravient/FinalCTA";
@@ -24,35 +25,89 @@ export function WhyKravientPage() {
     <div className="min-h-screen bg-cream text-ink">
       <Header />
       <main>
-        <section className="relative overflow-hidden bg-navy-deep">
-          <div className="container-site grid items-center gap-14 pb-20 pt-36 sm:pt-44 lg:grid-cols-12 lg:pb-28">
-            <div className="lg:col-span-7">
-              <SectionEyebrow tone="dark">Why Kravient</SectionEyebrow>
-              <h1 className="mt-6 font-display text-[40px] font-bold leading-[1.06] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                <span className="block">One Platform.</span>
-                <span className="block">Every Bharat Business.</span>
-                <span className="block">Built to work without</span>
-                <span className="block">the internet.</span>
+        <section className="relative overflow-hidden border-b border-line bg-white">
+          <div className="container-site grid min-h-[100svh] items-center gap-8 pb-14 pt-24 sm:pt-28 lg:grid-cols-12 lg:pb-16">
+            <div className="lg:col-span-6">
+              <SectionEyebrow>Why Kravient</SectionEyebrow>
+              <h1 className="mt-4 max-w-3xl font-display text-[34px] font-extrabold leading-[1.04] tracking-tight text-navy-deep sm:text-5xl lg:text-[56px]">
+                One platform for Bharat businesses, built to keep working.
               </h1>
-              <p className="mt-7 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-                Kravient exists because most software is designed for perfect conditions: fast
-                internet, new devices, patient users. Bharat works differently. So do we.
+              <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted2 sm:text-base">
+                Kravient is designed for the conditions real teams face every day: unreliable
+                connectivity, shared devices, busy counters and users who need software to feel
+                obvious from the first shift.
               </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {[
+                  [WifiOff, "Offline-first", "Core work continues without internet."],
+                  [IndianRupee, "Simple pricing", "One annual price with support included."],
+                  [Layers3, "Platform ready", "Built to support every Bharat business."],
+                ].map(([Icon, title, body]) => (
+                  <div key={title} className="border border-line bg-cream p-3">
+                    <Icon className="h-4 w-4 text-accent" aria-hidden="true" />
+                    <p className="mt-3 font-display text-xs font-bold text-navy-deep">{title}</p>
+                    <p className="mt-1.5 text-[11px] leading-relaxed text-muted2">{body}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  ["Offline-first", "#offline"],
+                  ["Simplicity", "#simplicity"],
+                  ["Pricing", "#pricing"],
+                  ["Platform vision", "#platform"],
+                ].map(([label, href]) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="inline-flex min-h-[36px] items-center border border-line px-3 text-xs font-semibold text-navy-deep transition-colors duration-200 hover:border-accent hover:text-accent"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="lg:col-span-5">
+
+            <div className="lg:col-span-6">
               <ScrollReveal delay={200}>
-                <div className="relative">
+                <div className="relative ml-auto max-w-xl">
                   <div
                     aria-hidden="true"
-                    className="absolute -right-4 -top-4 hidden h-full w-full border border-white/15 sm:block"
+                    className="absolute -right-4 -top-4 hidden h-full w-full border border-navy-deep/12 sm:block"
                   />
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative overflow-hidden border border-line bg-cream shadow-[0_30px_90px_-45px_rgba(0,0,0,0.75)]">
                     <img
                       src={whyHero}
-                      alt=""
-                      loading="lazy"
-                      className="h-full w-full object-cover"
+                      alt="A team member using Kravient in a busy hospital setting"
+                      loading="eager"
+                      className="aspect-[16/11] h-full w-full object-cover sm:aspect-[16/11]"
                     />
+                    <div className="bg-navy-deep p-3 sm:absolute sm:inset-x-0 sm:bottom-0 sm:bg-[linear-gradient(180deg,rgba(8,28,44,0)_0%,rgba(8,28,44,0.94)_100%)] sm:p-5 sm:pt-20">
+                      <div className="grid gap-2 sm:grid-cols-2">
+                        <div className="border border-white/18 bg-navy-deep/88 p-3 backdrop-blur">
+                          <CloudOff className="h-4 w-4 text-accent" aria-hidden="true" />
+                          <p className="mt-2 font-display text-xs font-bold text-white">
+                            Local-first workflow
+                          </p>
+                          <p className="mt-1 text-[11px] leading-relaxed text-white/64">
+                            Daily operations continue while sync waits for the network.
+                          </p>
+                        </div>
+                        <div className="border border-white/18 bg-navy-deep/88 p-3 backdrop-blur">
+                          <p className="font-display text-2xl font-extrabold leading-none text-white">
+                            Rs. 7k
+                          </p>
+                          <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
+                            per year
+                          </p>
+                          <p className="mt-1 text-[11px] leading-relaxed text-white/64">
+                            Every module, updates and support included.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -60,13 +115,12 @@ export function WhyKravientPage() {
           </div>
         </section>
 
-        <section id="offline" className="scroll-mt-24 bg-navy py-24 sm:py-32">
+        <section id="offline" className="scroll-mt-24 bg-navy py-16 sm:py-20">
           <div className="container-site">
             <ScrollReveal>
               <SectionEyebrow tone="dark">Offline-first is the foundation</SectionEyebrow>
-              <h2 className="mt-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
-                Connectivity should enhance software.
-                <br />
+              <h2 className="mt-6 max-w-5xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:whitespace-nowrap">
+                Connectivity should enhance software. {" "}
                 <span className="text-white/50">Not control it.</span>
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
@@ -74,7 +128,7 @@ export function WhyKravientPage() {
                 happens locally, instantly, and the cloud catches up when the network does.
               </p>
             </ScrollReveal>
-            <div className="mt-16">
+            <div className="mt-10">
               <FlowDiagram testId="why-offline-flow" />
             </div>
           </div>
@@ -155,42 +209,48 @@ export function WhyKravientPage() {
           </div>
         </section>
 
-        <section id="platform" className="scroll-mt-24 bg-navy-deep py-24 sm:py-32">
+        <section id="platform" className="scroll-mt-24 bg-navy-deep py-16 sm:py-20">
           <div className="container-site">
             <ScrollReveal>
-              <SectionEyebrow tone="dark">The Kravient platform</SectionEyebrow>
-              <h2 className="mt-6 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
-                One platform. Every Bharat business.
-              </h2>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-                Kravient HMS is live today. Every other product below is part of the planned future
-                platform, built on the same offline-first foundation.
-              </p>
+              <div>
+                <SectionEyebrow tone="dark">The Kravient platform</SectionEyebrow>
+                <h2 className="mt-5 max-w-5xl font-display text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:whitespace-nowrap">
+                  One platform. Every Bharat business.
+                </h2>
+              </div>
             </ScrollReveal>
+
             <ScrollReveal delay={100}>
-              <Accordion type="multiple" className="mt-14 w-full">
+              <Accordion type="multiple" className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {platformCatalog.map((category, index) => (
                   <AccordionItem
                     key={category.category}
                     value={`cat-${index}`}
-                    className="border-white/10"
+                    className="overflow-hidden border border-white/10 bg-white/[0.035] transition-colors duration-200 hover:border-white/20 data-[state=open]:border-accent/55 data-[state=open]:bg-white/[0.055]"
                   >
-                    <AccordionTrigger className="min-h-[60px] text-left font-display text-lg font-bold text-white hover:text-accent sm:text-xl">
-                      <span className="flex flex-wrap items-center gap-3">
-                        {category.category}
-                        <span className="text-xs font-semibold text-white/40">
-                          {category.products.length} products
+                    <AccordionTrigger className="group relative min-h-[128px] p-5 text-left hover:no-underline [&>svg]:absolute [&>svg]:bottom-5 [&>svg]:right-5 [&>svg]:h-7 [&>svg]:w-7 [&>svg]:rounded-full [&>svg]:border [&>svg]:border-white/15 [&>svg]:p-1.5 [&>svg]:text-white/55 [&>svg]:transition-all data-[state=open]:[&>svg]:border-accent/50 data-[state=open]:[&>svg]:text-accent">
+                      <span className="flex flex-1 flex-col items-start gap-7 pr-10">
+                        <span className="flex w-full items-start justify-between gap-4">
+                          <span className="font-display text-xl font-bold leading-tight text-white">
+                            {category.category}
+                          </span>
+                          <span className="shrink-0 rounded-full border border-white/10 bg-white/[0.045] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/48">
+                            {category.products.length} products
+                          </span>
+                        </span>
+                        <span className="text-xs font-bold uppercase tracking-[0.14em] text-accent/90 transition-colors duration-200 group-hover:text-accent">
+                          View products
                         </span>
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="grid gap-3 pb-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <AccordionContent className="px-5 pb-5 pt-0">
+                      <ul className="space-y-2 border-t border-white/10 pt-4">
                         {category.products.map((product) => (
                           <li
                             key={product.name}
-                            className="flex items-center justify-between border border-white/10 bg-navy-800 px-4 py-3"
+                            className="flex min-h-[38px] items-center justify-between gap-3 border border-white/10 bg-navy-deep/55 px-3 py-2"
                           >
-                            <span className="text-sm font-semibold text-white/85">
+                            <span className="text-xs font-semibold leading-tight text-white/82">
                               {product.name}
                             </span>
                             <StatusPill status={product.status} />
@@ -211,4 +271,3 @@ export function WhyKravientPage() {
     </div>
   );
 }
-

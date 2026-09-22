@@ -1,0 +1,51 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="243" height="643" viewBox="0 0 243 643">
+  <rect width="243" height="643" fill="#0a4a36"/>
+  <rect x="201" y="0" width="42" height="643" fill="#000" opacity="0.35"/>
+  <rect x="200" y="0" width="43" height="643" fill="#f7f8f6" opacity="0.55"/>
+  <rect x="204" y="11" width="29" height="24" rx="6" fill="#ffbd00"/>
+  <text x="210" y="27" fill="#074732" font-family="Arial, sans-serif" font-size="9" font-weight="700">आड</text>
+  <rect x="8" y="14" width="182" height="57" rx="10" fill="#155942" stroke="#2a6a54"/>
+  <circle cx="39" cy="42" r="20" fill="#f6fff7" stroke="#c6e2d0" stroke-width="2"/>
+  <text x="31" y="47" fill="#064a35" font-family="Arial, sans-serif" font-size="12" font-weight="800">ST</text>
+  <text x="68" y="38" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="800">शेखर तात्याबा कुंझीर</text>
+  <text x="68" y="52" fill="#bfe3d4" font-family="Arial, sans-serif" font-size="9">सौम्य शेखर कुंझीर</text>
+  <text x="10" y="99" fill="#a9ccbd" font-family="Arial, sans-serif" font-size="10" font-weight="700">नेव्हिगेशन</text>
+  <g font-family="Arial, sans-serif" font-size="11" font-weight="800">
+    <rect x="11" y="111" width="182" height="32" rx="9" fill="#ffbd00"/>
+    <text x="53" y="132" fill="#074732">डॅशबोर्ड</text>
+    <text x="53" y="163" fill="#d6eee3">सूचना</text>
+    <circle cx="177" cy="158" r="8" fill="#ffbd00"/>
+    <text x="174" y="162" fill="#074732" font-size="9">1</text>
+    <text x="53" y="194" fill="#d6eee3">ग्राहक पडताळणी</text>
+    <text x="53" y="226" fill="#d6eee3">तक्रार नोंदवा</text>
+    <text x="53" y="258" fill="#d6eee3">माझ्या तक्रारी</text>
+    <text x="53" y="290" fill="#d6eee3">दैनिक बाजार भाव</text>
+    <text x="53" y="322" fill="#d6eee3">बाजार माहिती</text>
+    <text x="53" y="354" fill="#d6eee3">सूचना आणि कागदपत्रे</text>
+    <text x="53" y="386" fill="#d6eee3">माझे प्रोफाइल</text>
+    <text x="53" y="418" fill="#d6eee3">माझ्या गाळ्याची माहिती</text>
+    <text x="53" y="450" fill="#d6eee3">पोस्ट सबमिट करा</text>
+    <text x="53" y="482" fill="#d6eee3">शेअर केलेल्या पोस्ट</text>
+    <text x="53" y="514" fill="#d6eee3">पोर्टल रिव्ह्यू</text>
+    <text x="53" y="546" fill="#d6eee3">पोर्टल मदत</text>
+  </g>
+  <g fill="none" stroke="#c7e0d3" stroke-width="1.2" opacity="0.85">
+    <rect x="21" y="121" width="10" height="10" rx="1"/>
+    <circle cx="26" cy="158" r="4"/>
+    <rect x="20" y="187" width="11" height="8" rx="1"/>
+    <rect x="21" y="220" width="9" height="10" rx="1"/>
+    <rect x="20" y="252" width="11" height="9" rx="1"/>
+    <path d="M22 282h9M25 278h6M25 286h6"/>
+    <rect x="20" y="316" width="11" height="10" rx="1"/>
+    <rect x="21" y="348" width="9" height="11" rx="1"/>
+    <circle cx="26" cy="382" r="4"/>
+    <rect x="21" y="412" width="10" height="10" rx="1"/>
+    <rect x="21" y="444" width="10" height="10" rx="1"/>
+    <rect x="21" y="476" width="10" height="10" rx="1"/>
+    <path d="M26 506l3 6 6 .5-4.5 4 1.4 6-5.9-3.2-5.9 3.2 1.4-6-4.5-4 6-.5z"/>
+  </g>
+  <line x1="0" y1="570" x2="201" y2="570" stroke="#06412f"/>
+  <text x="18" y="586" fill="#a9ccbd" font-family="Arial, sans-serif" font-size="10" font-weight="700">खाते</text>
+  <text x="53" y="618" fill="#d6eee3" font-family="Arial, sans-serif" font-size="11" font-weight="800">बाहेर पडा</text>
+  <g fill="none" stroke="#c7e0d3" stroke-width="1.2"><circle cx="25" cy="586" r="5"/><path d="M21 618h9m-4-4 4 4-4 4"/></g>
+</svg>

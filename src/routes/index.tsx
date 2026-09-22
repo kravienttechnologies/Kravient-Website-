@@ -578,15 +578,15 @@ export function Index() {
             </div>
             <div className="mt-14 grid gap-6 md:grid-cols-3">
               {caseStudies.map((study, index) => (
-                <article key={study.id} className="border border-line bg-white p-7">
+                <article key={study.slug} className="border border-line bg-white p-7">
                   <span className="font-display text-sm font-bold tracking-[0.3em] text-accent">
                     0{index + 1}
                   </span>
                   <h3 className="mt-12 font-display text-2xl font-bold text-navy-deep">
-                    {study.label}
+                    {study.projectName}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted2">
-                    Verified client details will be added here when available.
+                    {study.shortDescription}
                   </p>
                 </article>
               ))}
