@@ -1,5 +1,5 @@
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 
 import { Footer } from "@/components/kravient/Footer";
 import { Header } from "@/components/kravient/Header";
@@ -27,9 +27,37 @@ const contactBlocks = [
 const inputClass =
   "min-h-[54px] w-full rounded-[6px] border border-line bg-fog/70 px-4 py-3 text-[15px] font-medium text-ink shadow-inner shadow-navy-deep/[0.03] placeholder:text-muted2/55 transition-[border-color,background-color,box-shadow] duration-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-4 focus:ring-accent/10";
 const labelClass = "mb-2 block text-sm font-bold text-navy-deep";
+const web3FormsAccessKey = "7af0c831-3604-4503-b282-df0bf4be45ac";
 
 export function ContactPage() {
   const [interest, setInterest] = useState("Kravient HMS");
+  const [submitState, setSubmitState] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setSubmitState("sending");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to submit enquiry");
+      }
+
+      form.reset();
+      setInterest("Kravient HMS");
+      setSubmitState("success");
+    } catch {
+      setSubmitState("error");
+    }
+  }
 
   return (
     <div className="min-h-screen bg-cream text-ink">
@@ -88,7 +116,14 @@ export function ContactPage() {
 
             <div className="lg:col-span-7">
               <ScrollReveal delay={100}>
-                <form className="rounded-[8px] border border-line bg-white p-6 shadow-[0_26px_70px_-46px_rgba(8,27,45,0.45)] sm:p-8 lg:p-10">
+                <form
+                  onSubmit={handleSubmit}
+                  className="rounded-[8px] border border-line bg-white p-6 shadow-[0_26px_70px_-46px_rgba(8,27,45,0.45)] sm:p-8 lg:p-10"
+                >
+                  <input type="hidden" name="access_key" value={web3FormsAccessKey} />
+                  <input type="hidden" name="subject" value="New Kravient website enquiry" />
+                  <input type="hidden" name="from_name" value="Kravient Website" />
+                  <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} />
                   <div className="mb-8 border-b border-line pb-6">
                     <p className="font-display text-2xl font-bold text-navy-deep">
                       Project enquiry
@@ -108,6 +143,7 @@ export function ContactPage() {
                       </label>
                       <input
                         id="full_name"
+                        name="name"
                         type="text"
                         className={inputClass}
                         autoComplete="name"
@@ -124,6 +160,7 @@ export function ContactPage() {
                       </label>
                       <input
                         id="company"
+                        name="company"
                         type="text"
                         className={inputClass}
                         autoComplete="organization"
@@ -167,6 +204,7 @@ export function ContactPage() {
                       </label>
                       <input
                         id="email"
+                        name="email"
                         type="email"
                         className={inputClass}
                         autoComplete="email"
@@ -180,6 +218,7 @@ export function ContactPage() {
                       </label>
                       <input
                         id="phone"
+                        name="phone"
                         type="tel"
                         className={inputClass}
                         autoComplete="tel"
@@ -195,6 +234,7 @@ export function ContactPage() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       className={`${inputClass} min-h-[140px] resize-y`}
                       placeholder="Tell us about your requirement, timeline, or current workflow."
@@ -206,7 +246,7 @@ export function ContactPage() {
                     <label htmlFor="source" className={labelClass}>
                       How did you hear about us?
                     </label>
-                    <select id="source" className={inputClass}>
+                    <select id="source" name="source" className={inputClass}>
                       <option value="">Select an option</option>
                       {sources.map((source) => (
                         <option key={source} value={source}>
@@ -218,14 +258,25 @@ export function ContactPage() {
 
                   <button
                     type="submit"
+                    disabled={submitState === "sending"}
                     className="group mt-8 inline-flex min-h-[54px] w-full items-center justify-center gap-2.5 rounded-[6px] bg-accent px-8 text-sm font-bold tracking-wide text-white shadow-[0_20px_38px_-24px_rgba(244,122,56,0.95)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-accent-soft hover:shadow-[0_24px_46px_-24px_rgba(244,122,56,1)] sm:w-auto"
                   >
-                    Send Message
+                    {submitState === "sending" ? "Sending..." : "Send Message"}
                     <ArrowRight
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </button>
+                  {submitState === "success" && (
+                    <p className="mt-4 rounded-[6px] border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
+                      Thank you. Your enquiry has been sent successfully.
+                    </p>
+                  )}
+                  {submitState === "error" && (
+                    <p className="mt-4 rounded-[6px] border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-800">
+                      Something went wrong. Please call or email us directly.
+                    </p>
+                  )}
                 </form>
               </ScrollReveal>
             </div>
