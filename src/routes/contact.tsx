@@ -292,7 +292,8 @@ export function ContactPage() {
                   </button>
                   {submitState === "success" && (
                     <p className="mt-4 rounded-[6px] border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
-                      Thank you. Your enquiry has been sent successfully.
+                      Thank you. Your enquiry has been submitted successfully. Our team will
+                      connect with you shortly.
                     </p>
                   )}
                   {submitState === "error" && (
