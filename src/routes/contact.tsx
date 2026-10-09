@@ -5,13 +5,24 @@ import { Footer } from "@/components/kravient/Footer";
 import { Header } from "@/components/kravient/Header";
 import { PageHero } from "@/components/kravient/PageHero";
 import { ScrollReveal, SectionEyebrow } from "@/components/kravient/primitives";
+import { contactPlaceholders } from "@/data/content";
 
 const interests = ["Kravient HMS", "Custom Software", "Partnership", "Other"];
 const sources = ["Google Search", "Referral", "Social Media", "Event", "Other"];
 const contactBlocks = [
-  { label: "Email", value: "To be announced", icon: Mail },
-  { label: "Phone", value: "To be announced", icon: Phone },
-  { label: "Office", value: "Details coming soon", icon: MapPin },
+  {
+    label: "Email",
+    value: contactPlaceholders.email,
+    href: `mailto:${contactPlaceholders.email}`,
+    icon: Mail,
+  },
+  {
+    label: "Phone",
+    value: contactPlaceholders.phone,
+    href: `tel:${contactPlaceholders.phone.replace(/\s/g, "")}`,
+    icon: Phone,
+  },
+  { label: "Office", value: contactPlaceholders.address, icon: MapPin },
 ];
 const inputClass =
   "min-h-[48px] w-full border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-muted2/60 transition-colors duration-200 focus:border-accent focus:outline-none";
@@ -50,17 +61,26 @@ export function ContactPage() {
                           <span className="block text-xs font-bold uppercase tracking-[0.2em] text-muted2">
                             {block.label}
                           </span>
-                          <span className="mt-1 block text-base font-semibold text-navy-deep">
-                            {block.value}
-                          </span>
+                          {block.href ? (
+                            <a
+                              href={block.href}
+                              className="mt-1 block text-base font-semibold text-navy-deep transition-colors hover:text-accent"
+                            >
+                              {block.value}
+                            </a>
+                          ) : (
+                            <span className="mt-1 block text-base font-semibold leading-relaxed text-navy-deep">
+                              {block.value}
+                            </span>
+                          )}
                         </span>
                       </li>
                     );
                   })}
                 </ul>
                 <p className="mt-10 max-w-sm border-l-2 border-accent pl-5 text-sm leading-relaxed text-muted2">
-                  Our direct contact details are being finalised. Until then, the fastest way to
-                  reach us is the form: every message lands directly with the team.
+                  Reach out directly by email or phone, or use the form and our team will respond
+                  with the next steps.
                 </p>
               </ScrollReveal>
             </div>

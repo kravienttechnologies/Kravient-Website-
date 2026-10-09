@@ -1,12 +1,8 @@
-/**
- * Editable content constants.
- * PLACEHOLDERS: contact details are not confirmed yet. Replace the values
- * below once Praavi Group supplies real contact information.
- */
 export const contactPlaceholders = {
-  email: "{{KRAVIENT_EMAIL}}",
-  phone: "{{KRAVIENT_PHONE}}",
-  address: "{{OFFICE_ADDRESS}}",
+  email: "kravienttechnologies@gmail.com",
+  phone: "+91 9699369117",
+  address:
+    "1st Floor, Anand Complex, Solapur - Pune Hwy, near Ambika Jewellers, Loni Kalbhor, Pune, Maharashtra 412201",
 };
 
 /** Only list social profiles with confirmed, working URLs. */
