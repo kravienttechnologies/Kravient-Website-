@@ -11,8 +11,8 @@ import {
   WifiOff,
 } from "lucide-react";
 
-import aboutHero from "@/assets/about-hero.jpg";
 import heroBanner from "@/assets/banner img .png";
+import kravientOffice from "@/assets/kravient office.png";
 import statementPoster from "@/assets/statement-3.jpg";
 import { BrowserMockup } from "@/components/kravient/BrowserMockup";
 import { FinalCTA } from "@/components/kravient/FinalCTA";
@@ -532,7 +532,7 @@ export function Index() {
           <div className="grid lg:grid-cols-2">
             <div className="relative min-h-[320px] overflow-hidden lg:min-h-[560px]">
               <img
-                src={aboutHero}
+                src={kravientOffice}
                 alt=""
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
