@@ -25,7 +25,8 @@ const contactBlocks = [
   { label: "Office", value: contactPlaceholders.address, icon: MapPin },
 ];
 const inputClass =
-  "min-h-[48px] w-full border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-muted2/60 transition-colors duration-200 focus:border-accent focus:outline-none";
+  "min-h-[54px] w-full rounded-[6px] border border-line bg-fog/70 px-4 py-3 text-[15px] font-medium text-ink shadow-inner shadow-navy-deep/[0.03] placeholder:text-muted2/55 transition-[border-color,background-color,box-shadow] duration-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-4 focus:ring-accent/10";
+const labelClass = "mb-2 block text-sm font-bold text-navy-deep";
 
 export function ContactPage() {
   const [interest, setInterest] = useState("Kravient HMS");
@@ -87,12 +88,21 @@ export function ContactPage() {
 
             <div className="lg:col-span-7">
               <ScrollReveal delay={100}>
-                <form className="border border-line bg-white p-7 sm:p-10">
-                  <div className="grid gap-6 sm:grid-cols-2">
+                <form className="rounded-[8px] border border-line bg-white p-6 shadow-[0_26px_70px_-46px_rgba(8,27,45,0.45)] sm:p-8 lg:p-10">
+                  <div className="mb-8 border-b border-line pb-6">
+                    <p className="font-display text-2xl font-bold text-navy-deep">
+                      Project enquiry
+                    </p>
+                    <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted2">
+                      Share a few details and we will get back with the right next step.
+                    </p>
+                  </div>
+
+                  <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label
                         htmlFor="full_name"
-                        className="mb-2 block text-sm font-semibold text-navy"
+                        className={labelClass}
                       >
                         Full Name <span className="text-accent">*</span>
                       </label>
@@ -101,12 +111,14 @@ export function ContactPage() {
                         type="text"
                         className={inputClass}
                         autoComplete="name"
+                        placeholder="Your full name"
+                        required
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="company"
-                        className="mb-2 block text-sm font-semibold text-navy"
+                        className={labelClass}
                       >
                         Company / Hospital Name
                       </label>
@@ -115,22 +127,23 @@ export function ContactPage() {
                         type="text"
                         className={inputClass}
                         autoComplete="organization"
+                        placeholder="Organization name"
                       />
                     </div>
                   </div>
 
-                  <fieldset className="mt-6">
-                    <legend className="mb-3 text-sm font-semibold text-navy">
+                  <fieldset className="mt-7">
+                    <legend className={labelClass}>
                       Interested In <span className="text-accent">*</span>
                     </legend>
-                    <div className="flex flex-wrap gap-2.5">
+                    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                       {interests.map((option) => (
                         <label
                           key={option}
-                          className={`flex min-h-[44px] cursor-pointer items-center border px-4 text-sm font-semibold transition-colors duration-200 ${
+                          className={`flex min-h-[48px] cursor-pointer items-center justify-center rounded-[6px] border px-4 text-center text-sm font-bold transition-[border-color,background-color,color,box-shadow] duration-200 ${
                             interest === option
-                              ? "border-accent bg-accent/10 text-navy-deep"
-                              : "border-line bg-white text-muted2 hover:border-navy/40"
+                              ? "border-accent bg-accent/10 text-navy-deep shadow-[0_12px_30px_-22px_rgba(244,122,56,0.9)]"
+                              : "border-line bg-fog/70 text-muted2 hover:border-navy/35 hover:bg-white hover:text-navy-deep"
                           }`}
                         >
                           <input
@@ -147,34 +160,50 @@ export function ContactPage() {
                     </div>
                   </fieldset>
 
-                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                  <div className="mt-7 grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="email" className="mb-2 block text-sm font-semibold text-navy">
+                      <label htmlFor="email" className={labelClass}>
                         Email Address <span className="text-accent">*</span>
                       </label>
-                      <input id="email" type="email" className={inputClass} autoComplete="email" />
+                      <input
+                        id="email"
+                        type="email"
+                        className={inputClass}
+                        autoComplete="email"
+                        placeholder="name@example.com"
+                        required
+                      />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="mb-2 block text-sm font-semibold text-navy">
+                      <label htmlFor="phone" className={labelClass}>
                         Phone Number <span className="text-accent">*</span>
                       </label>
-                      <input id="phone" type="tel" className={inputClass} autoComplete="tel" />
+                      <input
+                        id="phone"
+                        type="tel"
+                        className={inputClass}
+                        autoComplete="tel"
+                        placeholder="+91 98765 43210"
+                        required
+                      />
                     </div>
                   </div>
 
-                  <div className="mt-6">
-                    <label htmlFor="message" className="mb-2 block text-sm font-semibold text-navy">
+                  <div className="mt-7">
+                    <label htmlFor="message" className={labelClass}>
                       Message <span className="text-accent">*</span>
                     </label>
                     <textarea
                       id="message"
                       rows={5}
-                      className={`${inputClass} min-h-[120px] resize-y`}
+                      className={`${inputClass} min-h-[140px] resize-y`}
+                      placeholder="Tell us about your requirement, timeline, or current workflow."
+                      required
                     />
                   </div>
 
-                  <div className="mt-6">
-                    <label htmlFor="source" className="mb-2 block text-sm font-semibold text-navy">
+                  <div className="mt-7">
+                    <label htmlFor="source" className={labelClass}>
                       How did you hear about us?
                     </label>
                     <select id="source" className={inputClass}>
@@ -189,7 +218,7 @@ export function ContactPage() {
 
                   <button
                     type="submit"
-                    className="group mt-8 inline-flex min-h-[52px] w-full items-center justify-center gap-2.5 bg-accent px-8 text-sm font-semibold tracking-wide text-navy-deep transition-colors duration-300 hover:bg-accent-soft sm:w-auto"
+                    className="group mt-8 inline-flex min-h-[54px] w-full items-center justify-center gap-2.5 rounded-[6px] bg-accent px-8 text-sm font-bold tracking-wide text-white shadow-[0_20px_38px_-24px_rgba(244,122,56,0.95)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-accent-soft hover:shadow-[0_24px_46px_-24px_rgba(244,122,56,1)] sm:w-auto"
                   >
                     Send Message
                     <ArrowRight
