@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import aboutHero from "@/assets/about-hero.jpg";
-import heroHospital from "@/assets/hero-hospital.jpg";
+import heroBanner from "@/assets/banner img .png";
 import statementPoster from "@/assets/statement-3.jpg";
 import { BrowserMockup } from "@/components/kravient/BrowserMockup";
 import { FinalCTA } from "@/components/kravient/FinalCTA";
@@ -220,7 +220,7 @@ export function Index() {
               <div className="absolute inset-y-0 right-0 w-full overflow-hidden">
                 <div className="absolute inset-y-0 left-0 z-10 w-2/5 bg-gradient-to-r from-white via-white/80 to-white/0" />
                 <img
-                  src={heroHospital}
+                  src={heroBanner}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover object-right opacity-95"
                 />
