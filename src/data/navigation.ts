@@ -118,6 +118,7 @@ export const primaryNav: NavItem[] = [
   { label: "Solutions", to: "/solutions" },
   { label: "Case Studies", to: "/case-studies" },
   { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export const footerColumns: MegaColumn[] = [
