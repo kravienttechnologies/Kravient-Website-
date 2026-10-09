@@ -31,12 +31,23 @@ const web3FormsAccessKey = "7af0c831-3604-4503-b282-df0bf4be45ac";
 
 export function ContactPage() {
   const [interest, setInterest] = useState("Kravient HMS");
+  const [phone, setPhone] = useState("");
   const [submitState, setSubmitState] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const phoneValue = phone.replace(/\D/g, "");
+
+    if (phoneValue.length !== 10) {
+      form.phone.setCustomValidity("Please enter a valid 10 digit phone number.");
+      form.phone.reportValidity();
+      return;
+    }
+
+    form.phone.setCustomValidity("");
+    formData.set("phone", phoneValue);
 
     setSubmitState("sending");
 
@@ -53,6 +64,7 @@ export function ContactPage() {
 
       form.reset();
       setInterest("Kravient HMS");
+      setPhone("");
       setSubmitState("success");
     } catch {
       setSubmitState("error");
@@ -222,7 +234,18 @@ export function ContactPage() {
                         type="tel"
                         className={inputClass}
                         autoComplete="tel"
+                        inputMode="numeric"
+                        maxLength={10}
+                        minLength={10}
+                        pattern="[0-9]{10}"
                         placeholder="+91 98765 43210"
+                        value={phone}
+                        onChange={(event) => {
+                          const nextValue = event.target.value.replace(/\D/g, "").slice(0, 10);
+                          setPhone(nextValue);
+                          event.target.setCustomValidity("");
+                        }}
+                        title="Please enter a valid 10 digit phone number."
                         required
                       />
                     </div>
