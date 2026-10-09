@@ -218,14 +218,13 @@ export function Index() {
 
             <div className="relative -mx-5 min-h-[360px] sm:-mx-8 lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:min-h-0 lg:w-[52vw]">
               <div className="absolute inset-y-0 right-0 w-full overflow-hidden">
-                <div className="absolute inset-y-0 left-0 z-10 w-2/5 bg-gradient-to-r from-white via-white/80 to-white/0" />
+                <div className="absolute inset-y-0 left-0 z-10 w-[30%] bg-gradient-to-r from-white via-white/55 to-white/0" />
                 <img
                   src={heroBanner}
                   alt=""
-                  className="absolute inset-0 h-full w-full object-cover object-right opacity-95"
+                  className="absolute inset-0 h-full w-full object-cover object-right brightness-110 contrast-110 saturate-110"
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_70%,rgba(244,122,56,0.26),transparent_32%)]" />
-                <div className="absolute inset-0 mix-blend-screen bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(244,122,56,0.16)_45%,rgba(8,27,45,0.08)_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_70%,rgba(244,122,56,0.12),transparent_30%)]" />
               </div>
             </div>
           </div>
