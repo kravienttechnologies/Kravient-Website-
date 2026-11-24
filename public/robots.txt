@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /*?*
 
-Sitemap: https://kravienttechnologies.com/sitemap.xml
+Sitemap: https://www.kravient.com/sitemap.xml
